@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+body {
+  color: black;
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+}
+
+.header,
+.footer {
+  width: 100%;
+  height: 3.4375rem;
+  background: #0067a3;
+
+  .header__wrapper,
+  .footer__wrapper {
+    display: flex;
+    height: 100%;
+    padding: 11px 20px 18px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__title {
+    color: white;
+    font-size: 1.75rem;
+  }
+  .header__login {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    & img {
+      object-fit: cover;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+
+    & svg {
+      margin-left: 0.5rem;
+      transition: 0.6s;
+    }
+  }
+}
+
+.main,
+#kanban_user {
+  width: 100%;
+  height: 100%;
+  max-height: 40rem;
+  background-color: #0079bf;
+}
+
+.kanban {
+  display: flex;
+}
+
+.kanban__column {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background: #ebecf0;
+}
+
+.kanban__column:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.kanban__column-title {
+  margin-bottom: 0.94rem;
+  color: #000;
+  font-size: 1.125rem;
+  user-select: none;
+}
+
+.kanban__task {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.kanban__item-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.kanban__dropzone {
+  height: 0.7rem;
+  transition: background 0.15s, height 0.15s;
+}
+
+.kanban__dropzone--active {
+  height: 1.4rem;
+  background: rgba(0 0 0 0.25);
+}
+
+.kanban__add-item {
+  width: 100%;
+  padding: 0.4rem 0;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  font-size: 1.125rem;
+  color: #5e6c84;
+  margin-top: 0.5rem;
+}
+
+.footer__title {
+  display: flex;
+  color: white;
+  font-size: 1.125rem;
+}
+
+.me-2 {
+  margin-bottom: 0.8rem;
+  width: auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: darkcyan;
+  text-align: center;
+}
+
+#app-login-form-reg {
+  width: 100%;
+  max-width: 20rem;
+  padding: 0.8rem;
+  border: 1px solid darkcyan;
+  border-radius: 0.5rem;
+  background-color: lightcyan;
+  margin: 20px auto;
+}
+
+#app-login-btn-reg {
+  color: black;
+
+  &:hover {
+    color: lightcyan;
+    background-color: black;
+  }
+}
+
+.title-wrapper {
+  color: darkmagenta;
+  text-align: center;
+  margin: 20px;
+  text-decoration: underline;
+}
+
+#app-login-btn {
+  width: 160px;
+}
+
+/* ADMIN PANEL */
+
+.welcome_msg {
+  color: white;
+  padding: 0.8rem;
+}
+
+.user__list {
+  background-color: aquamarine;
+  padding: 1rem 0;
+}
+
+.user__list-item {
+  width: 80%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #d6d6d6;
+
+  & h3 {
+    margin: 0;
+  }
+}
+
+.list__input {
+  display: flex;
+  align-items: center;
+
+  & label {
+    margin-right: 0.8rem;
+  }
+}
+
+.is-dragging {
+  scale: 1.05;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  background: rgb(50, 50, 50);
+  color: white;
+}
+
+.btn-active {
+  cursor: pointer;
+  color: darkblue;
+  margin-left: 0.5rem;
+}
+
+.kanban__task-content {
+  display: inline;
+}
+
+.edit-icon {
+  margin: 0.8rem 0.8rem;
+}
+
+.delete-btn {
+  color: red;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
